@@ -1,0 +1,319 @@
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            color: #2c3e50;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+
+        /* ======================= Navbar ========================= */
+        nav {
+            background: #000;
+            transition: background 0.5s;
+        }
+
+        nav a {
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #c29752;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.8rem;
+            color: #c29752;
+        }
+
+        /* ======================= Animations Keyframes ========================= */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes zoomIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* ======================= Hero Section ========================= */
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+            color: white;
+            padding: 160px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(to right, #e4de32, #ffcc00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+        }
+
+        .hero .btn {
+            margin: 10px;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+
+        .hero .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .btn-primary {
+            background-color: #c29752;
+            border: none;
+        }
+
+        .btn-outline-light {
+            border: 2px solid white;
+            color: white;
+        }
+
+        /* ======================= About Section ========================= */
+        #about {
+            padding: 100px 20px;
+            background: #f9f9f9;
+            opacity: 0;
+            transition: all 0.8s ease-in-out;
+        }
+
+        #about.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #about h2 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* ======================= Projects Section ========================= */
+        #projects {
+            padding: 100px 20px;
+            background-color: #fff;
+            opacity: 0;
+            transition: all 0.8s ease-in-out;
+        }
+
+        #projects.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease-in-out;
+            animation: zoomIn 0.8s ease-out;
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .project-card h4 {
+            margin: 15px 0 10px;
+            font-weight: bold;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            min-height: 350px;
+            /* Ensuring equal height */
+        }
+
+        .project-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .project-card h4 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+
+        /* ======================= Skills Section ========================= */
+        #skills {
+            padding: 10% 5%;
+            background: #f0f0f0;
+            opacity: 0;
+            transition: all 0.8s ease-in-out;
+        }
+
+        #skills.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .skill-item {
+            text-align: center;
+            margin-bottom: 30px;
+            animation: bounce 1.5s infinite;
+        }
+
+        .skill-item i {
+            border: 2px solid grey;
+            padding: 3%;
+            border-radius: 5px;
+            font-size: 3rem;
+            color: #c29752;
+        }
+
+        .skill-item h5 {
+            margin-top: 15px;
+        }
+
+        .skillsection {
+            align-items: center;
+            text-align: center;
+
+        }
+
+
+        /* ======================= Contact Section ========================= */
+        #contact {
+            padding: 100px 20px;
+            background: #111;
+            color: white;
+            opacity: 0;
+            transition: all 0.8s ease-in-out;
+        }
+
+        #contact.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .contact-form .form-control {
+            margin-bottom: 15px;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .contact-form .form-control:focus {
+            box-shadow: 0 0 8px rgba(194, 151, 82, 0.7);
+        }
+
+        /* ======================= Footer ========================= */
+        footer {
+            background-color: #000;
+            color: #aaa;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #c29752;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* ======================= Scroll to Top Button ========================= */
+        .scroll-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #c29752;
+            color: white;
+            border-radius: 50%;
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            display: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .scroll-top:hover {
+            background-color: #8c6c3f;
+            transform: translateY(-5px);
+        }
+
+       
+   
